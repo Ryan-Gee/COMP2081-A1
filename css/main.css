@@ -276,12 +276,16 @@ main img {
 
 img.d-block {
     object-fit: cover;
-    width: 100px;
-    height: 100vh;
+    /* width: 100px; */
+    height: 80vh;
+}
+
+.slide {
+    height: 80vh;
 }
 
 .carousel-inner {
-    height: 100vh;
+    height: 80vh;
 }
 
 
@@ -346,4 +350,22 @@ footer {
 
 footer p {
     color: rgb(82, 72, 65);
+}
+
+@media only screen and (max-width: 600px) {
+    p {
+        font-size: 12pt;
+    }
+
+    .carousel-inner {
+        height: 50vh;
+    }
+
+    .slide {
+        height: 50vh;
+    }
+
+    img.d-block {
+        object-position: 75% 50%;
+    }
 }
