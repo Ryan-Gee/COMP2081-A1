@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Teko:300,400,600&display=swap');
+
+/* #bc9f75 */
+
+canvas {
+    pointer-events: none;
+    overflow-x: hidden;
+    position: fixed;
+}
+
+body {
+    background-color: #1a1a1a;
+    background: linear-gradient(-45deg, #0a0a0a, #1a1a1a, #312421);
+	background-size: 100% 100%;
+    /* animation: gradient 2s ease infinite; */
+    overflow-x: hidden;
+}
+
+
+h1, h2, h3, h4, .nav-link, button {
+    color: #bc9f75;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    transition: .2s;
+}
+
+.nav {
+    width: 100%;
+}
+
+.collapse .nav-item::after {
+    display: block;
+    content: "";
+    width: 2px;
+    height: 100px;
+    position: relative;
+    background-color: #bc9f75;
+    transition: .5s;
+    top: -100%;
+    left: 50%;
+    transition: 0.3s;
+}
+
+.show ul li.nav-item::after {
+    display: none;
+}
+
+.nav-item {
+    transition: 0.2s;
+    display: block;
+}
+
+.nav-item:hover {
+    transform: translateY(10%);
+}
+
+.nav-link {
+    letter-spacing: .2em;
+    font-size: 140%;
+    /* background-image: linear-gradient(90deg, #3d2a25, #3d2a25, transparent, transparent);
+    background-repeat: no-repeat;
+    background-size: 400%;
+	background-position-x: 100%; */
+    transition: .5s;
+    width: 200%;
+    text-align: center;
+    transform: translateX(-23%);
+}
+
+.nav-link:hover {
+    color: #97794f;
+    /* background-position-x: 0%; */
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger4.svg?color=bc9f75');
+}
+
+button.navbar-toggler {
+    outline: none;
+}
+
+h1 {
+    font-size: 300%;
+    text-align: center;
+    letter-spacing: .8em;
+}
+
+header img {
+    width: 25%;
+    position: relative;
+    left: 37.5%;
+    margin-top: 0vh;
+    animation: bob 5s ease infinite;
+    position: relative;
+}
+
+@keyframes bob {
+    0% {
+        transform: scale(1);
+        top: -10px;
+    }
+	50% {
+        transform: scale(1.05);
+        top: 10px;
+    }
+	100% {
+        transform: scale(1);
+        top: -10px;
+	}
+} 
+
+.hide {
+    opacity: 0;
+}
+
+main {
+ color: #837561;
+ font-family: 'Montserrat', sans-serif;
+ /* background: linear-gradient(0deg, #1a1a1a, transparent); */
+ padding: 20px;
+}
+
+main > .row:first-of-type {
+    /* background: linear-gradient(0deg, #0a0a0a, transparent); */
+}
+
+main > .row:first-of-type {
+    margin-top: 10vh;
+}
+
+main > .row {
+    margin-top: 5vh;
+    /* background-color: #0a0a0a; */
+}
+
+h2 {
+    font-size: 42pt;
+    font-weight: 400;
+}
+
+
+h2::after {
+    display: block;
+    content: "";
+    width: 0%;
+    height: 1px;
+    position: relative;
+    background-color: #bc9f75;
+    bottom: 0.1em;
+    transition: 0.5s;
+}
+
+.panel h3 {
+    position: absolute;
+    color: #bc9f7533;
+}
+
+
+.panel:hover h2::after, .panel:hover h2::before {
+    width: 100%;
+}
+
+.panel::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px dotted #bc9f75;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+.justify-content-start .panel:hover::after, .justify-content-center .panel:hover::after {
+    /* width: calc(100% + 20px);
+    height: calc(100% + 20px); */
+    top: 10px;
+    left: 10px;
+}
+
+.justify-content-end .panel:hover::after {
+    top: 10px;
+    left: -10px;
+}
+
+h2.hero {
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    word-spacing: .2em;
+    line-height: 90%;
+}
+
+p {
+    color: #837561;
+    font-size: 15pt;
+}
+
+.panel, button {
+    box-shadow: 0px 0px 20px 0px #00000033;
+    border: 1px solid #bc9f75;
+    background-color: #1a1a1a;
+    padding: 20px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.corner-top::before, .corner-top::after, .corner-bottom::before, .corner-bottom::after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transition: .4s;
+    background-color: #bc9f75;
+    background-clip: content-box;
+    padding: 6px;
+    z-index: 100;
+}
+
+.corner-top::before {
+    top: -10px;
+    left: -10px;
+    border-top: 1px solid #bc9f75;
+    border-left: 1px solid #bc9f75;
+}
+
+.panel:hover .corner-top::before, .panel:hover .corner-top::after, .panel:hover .corner-bottom::before, .panel:hover .corner-bottom::after {
+    width: 27px;
+    height: 27px;
+    padding: 8px;
+}
+
+
+.corner-top::after {
+    top: -10px;
+    right: -10px;
+    border-top: 1px solid #bc9f75;
+    border-right: 1px solid #bc9f75;
+}
+
+
+.corner-bottom::before {
+    bottom: -10px;
+    left: -10px;
+    border-bottom: 1px solid #bc9f75;
+    border-left: 1px solid #bc9f75;
+}
+
+.corner-bottom::after {
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 1px solid #bc9f75;
+    border-right: 1px solid #bc9f75;
+}
+
+.panel:hover {
+    box-shadow: 0px 0px 25px 10px #00000033;
+    background-color: #222;
+}
+
+
+main img {
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+    filter: saturate(50%);
+    transition: 0.7s;
+}
+
+.panel:hover img {
+    filter: saturate(100%);
+}
+
+img.d-block {
+    object-fit: cover;
+    width: 100px;
+    height: 100vh;
+}
+
+.carousel-inner {
+    height: 100vh;
+}
+
+
+h5 {
+    color: #bc9f75;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gradientfade {
+    background: linear-gradient(180deg, transparent, #1a1a1a);
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+button {
+    font-size: 20pt;
+    padding: 3px 40px;
+    background-color: #97794f;
+    color: #1a1a1a;
+    border: 1px solid #bc9f75;
+    position: relative;
+    background: linear-gradient(180deg, #97794f 45%, #97794f44 55%);
+    background-size: 300% 300%;
+    transition: 0.3s;
+    text-align: center;
+}
+
+button:hover {
+    background-position: 100% 100%;
+    color: #bc9f75;
+    outline: none;
+}
+
+.border-expand::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    left: -5px;
+    top: -5px;
+    border: 1px dotted #bc9f75;
+    transition: 0.5s;
+}
+
+button:hover .border-expand::before {
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    left: -8px;
+    top: -8px;
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 5px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, transparent, #1a1a1a 20%, #1a1a1a 80%, transparent);
+}
+
+footer p {
+    color: rgb(82, 72, 65);
+}
