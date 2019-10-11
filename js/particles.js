@@ -5,8 +5,6 @@
 //This particular system has been created so that particles will always spawn at the bottom right corner of the screen and blow towards the top left
 //All code is 100% original, written from scratch, specifically for the purpose of the assignment (although I'll probably keep it for future use!)
 
-
-
 var canv = document.getElementById("particleCanvas");
 var ctx = canv.getContext('2d');
 var width = screen.width;
@@ -22,6 +20,7 @@ var particles = [];
 var turbulenceStrength = 0.7;
 //Strength of the wind on the particles (constant force, predefined direction)
 var windStrength = 7;
+windStrength = windStrength * (width/1500);
 //Radius of the off-screen spawning area
 var spawnSize = 100;
 
